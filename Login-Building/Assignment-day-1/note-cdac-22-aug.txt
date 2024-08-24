@@ -1,0 +1,58 @@
+faculty-kharghar@cdac.in
+CC: adityakansana@cdac.in
+
+repository:Folder
+
+logic building
+dialy work
+assignment
+short note
+
+
+
+in repository
+
+
+create file
+login building
+->assignmnent
+
+
+
+for creating folder add / sine and file also
+
+
+
+
+
+maximum one public clas we declare
+
+
+
+in switch case variable not allowed
+in switch case default is optional
+
+
+
+for loop
+
+
+int max = (num1 > num2) 
+                    ? (num1 > num3 ? num1 : num3) 
+                    : (num2 > num3 ? num2 : num3)
+
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+
+        String result = (num % 2 == 0) ? num+" is even." : num+" is odd.";
+        System.out.println(result);
+    
+
+
+    }
+}
