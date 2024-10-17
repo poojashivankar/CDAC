@@ -1,0 +1,27 @@
+ 1) Which field of the Customers table is the primary key?
+
+
+ans=>
+
+The primary key in a database table is the field (or set of fields) that uniquely identifies each record in the table.
+If you're working with a specific database schema, you would need to
+ look at the table definition or ask for clarification on which field is designated as the primary key.
+ But usually, a customer ID (Cnum or CustomerID) serves this role.
+In a Customers table, the most common field used as a primary key is typically something
+ like Cnum (Customer Number) or CustomerID, because these fields uniquely identify each customer.
+
+
+2) What is the 4th column of the Customers table? 
+
+ans =>  the 4th column is Rating, which is an integer field. It stores the rating for the customers.
+
+
+3) What is another word for row?  For column? 
+
+ans =>  Another word for a row is a record or tuple.
+        Another word for a column is a field or attribute.
+
+4) Why isn’t it possible to see the first five rows of a table?
+ans =>In a Relational Database Management System there is no such thing as a first or last row in a table.
+ The SQL language explicitly states that any RDBMS is free to return data in any order
+ that is convenient unless the query contains an ORDER BY clause which then defines the order of returned rows

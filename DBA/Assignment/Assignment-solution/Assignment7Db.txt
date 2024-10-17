@@ -1,0 +1,69 @@
+Assignment –7
+ Summarizing Data with Aggregate Functions.
+
+
+1) Write a query that counts all orders for October 3.
+ans=>
+ select count(*) from orders where Odate='1990-10-03';
++----------+
+| count(*) |
++----------+
+|        5 |
++----------+
+
+ 
+2) Write a query that counts the number of different non-NULL city values in the 
+Customers table.
+ SELECT COUNT(DISTINCT City) AS distinct_city_count
+    -> FROM Customers
+    -> WHERE City IS NOT NULL;
++---------------------+
+| distinct_city_count |
++---------------------+
+|                   4 |
+
+ 
+3) Write a query that selects each customer’s smallest order. 
+
+
+4) Write a query that selects the first customer, in alphabetical order, whose name 
+begins with G.
+ans=>
+ select * from customers where Cname like 'G%'
+    -> order by Cname
+    -> limit 1;
++------+----------+------+--------+------+
+| Cnum | Cname    | City | Rating | Snum |
++------+----------+------+--------+------+
+| 2002 | Giovanni | Rome |    200 | 1003 |
++------+----------+------+--------+------+
+1 row in set (0.00 sec) 
+
+5) Write a query that selects the highest rating in each city. 
+ans=>
+   -> Max(Rating) as Highst_Rating
+    -> from customers
+    -> Group by City;
++----------+---------------+
+| City     | Highst_Rating |
++----------+---------------+
+| London   |           100 |
+| Rome     |           200 |
+| San Jose |           300 |
+| Berlin   |           300 |
++----------+---------------+
+6) Write a query that counts the number of salespeople registering orders for each 
+day. (If a salesperson has more than one order on a given day, he or she should be 
+counted only once.).
+ select Odate,
+    -> Count(distinct Snum) as distinct_salespeople_count
+    -> from orders
+    -> Group by Odate
+    -> order by Odate;
++------------+----------------------------+
+| Odate      | distinct_salespeople_count |
++------------+----------------------------+
+| 1990-10-03 |                          4 |
+| 1990-10-04 |                          2 |
+| 1990-10-05 |                          1 |
+| 1990-10-06 |                          2 |

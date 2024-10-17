@@ -1,0 +1,20 @@
+ 1) Does ANSI recognize the data type DATE?
+
+
+ans=>
+
+Yes, ANSI SQL (American National Standards Institute SQL) does recognize the data type `DATE`
+ In ANSI SQL, the `DATE` data type is used to store calendar dates, typically without any time component
+ The `DATE` type usually represents a date in the format of year, month, and day.
+According to the ANSI SQL standard, DATE is a valid data type for representing dates.
+ Format: YYYY-MM-DD
+ Range: 0001-01-01 to 9999-12-31
+
+
+
+2) Which subdivision of SQL is used to insert values in tables?
+
+ans=>he “INSERT INTO” command is a part of the Data Manipulation Language (DML),
+ a sublanguage of SQL that enables modification and retrieval of information from database objects.
+ This command enables sus to insert rows into tables.
+ Using this command, you can insert values into all columns or selected columns of a table.

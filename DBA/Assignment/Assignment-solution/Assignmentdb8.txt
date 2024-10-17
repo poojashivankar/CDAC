@@ -1,0 +1,69 @@
+Assignment –8
+ Formatting Query output.
+
+
+
+ 1) Assume each salesperson has a 12% commission. Write a query on the orders 
+table that will produce the order number, the salesperson number, and the amount 
+of the salesperson’s commission for that order. 
+ans=>
+ select Onum ,Snum,0.12*Amt as salesperson_amount from orders;
++------+------+--------------------+
+| Onum | Snum | salesperson_amount |
++------+------+--------------------+
+| 3001 | 1007 |               2.24 |
+| 3003 | 1001 |              92.06 |
+| 3002 | 1004 |             228.01 |
+| 3005 | 1002 |             619.25 |
+| 3006 | 1007 |             131.78 |
+| 3009 | 1003 |             205.59 |
+| 3007 | 1002 |               9.09 |
+| 3008 | 1001 |             566.76 |
+| 3010 | 1002 |             157.19 |
+| 3011 | 1001 |            1187.03 |
++------+------+--------------------+
+
+2) Write a query on the Customers table that will find the highest rating in each city. 
+Put the output in this form: 
+For the city (city), the highest rating is : (rating). 
+ans=>
+ select concat('For the City ', City,',The highest rating is : ',MAX(Rating)) AS Highest_rating_city from customers GROUP BY City;
++---------------------------------------------------+
+| Highest_rating_city                               |
++---------------------------------------------------+
+| For the City London,The highest rating is : 100   |
+| For the City Rome,The highest rating is : 200     |
+| For the City San Jose,The highest rating is : 300 |
+| For the City Berlin,The highest rating is : 300   |
++---------------------------------------------------+
+4 rows in set (0.00 sec)
+
+3) Write a query that lists customers in descending order of rating. Output the rating 
+field first, followed by the customer’s name and number. 
+ans=>
+select * from customers order by Rating DESC;
++------+----------+----------+--------+------+
+| Cnum | Cname    | City     | Rating | Snum |
++------+----------+----------+--------+------+
+| 2004 | Grass    | Berlin   |    300 | 1002 |
+| 2008 | Cisneros | San Jose |    300 | 1007 |
+| 2002 | Giovanni | Rome     |    200 | 1003 |
+| 2003 | Liu      | San Jose |    200 | 1002 |
+| 2001 | Hoffman  | London   |    100 | 1001 |
+| 2006 | Clemens  | London   |    100 | 1001 |
+| 2007 | Pereira  | Rome     |    100 | 1004 |
++------+----------+----------+--------+------+
+4) Write a query that totals the orders for each day and places the results in 
+descending order. 
+
+ans=>
+ select Odate,SUM(Amt) AS total_order from orders group by Odate order by total_order DESC;
++------------+-------------+
+| Odate      | total_order |
++------------+-------------+
+| 1990-10-06 |    11201.83 |
+| 1990-10-03 |     8944.59 |
+| 1990-10-05 |     4723.00 |
+| 1990-10-04 |     1788.98 |
++------------+-------------+
+4 rows in set (0.00 sec)
