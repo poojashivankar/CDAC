@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+
+    <style>
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            width: 800px;
+           
+        }
+        .main_container{
+            background-image: linear-gradient(to right,#f098c8, #7ac8e8);
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h2{
+            margin: 0px;
+        }
+        .wrap_div {
+            background-color: #fff;
+            padding: 30px;
+            margin-top: -3px;
+        }
+        input.fname,input.lname{
+            padding: 8px;
+            margin: 10px 0px;
+            height: 30px;
+            border-radius: 2px;
+            border-color: #eee;
+            border-width: 1px;
+            width: 47%;
+        }
+        .email_col, .phnno {
+        	display: flex;
+        	flex-direction: column;
+        	width: 50%;
+        	margin: 0px 5px 0px 0px;
+           
+        }
+      
+        input.pnum, input.email {
+	padding: 8px;
+	border-radius: 2px;
+	border-color: #eee;
+	border-width: 1px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+    height: 30px;
+}
+        .email_phnno{
+        	display: flex;
+        	flex-direction: row;
+        	width: 100%;
+        	justify-content: space-between;
+            margin: 20px 0px;
+        }
+        .phnno {
+        	display: flex;
+        	flex-direction: column;
+        }
+        .email {
+	width: 95%;
+}
+.gender_row {
+	display: flex;
+	flex-direction: row;
+}
+.gender_row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 10px 0px;
+}
+.address,.comment {
+	display: flex;
+	flex-direction: column;
+    margin-top: 20px;
+}
+.add,.cmt{
+	height: 80px;
+	border-radius: 5px;
+	margin-top: 10px;
+	border-color: #eee;
+	border-width: 1px;
+	margin-bottom: 20px;
+}
+.type_of_dance {
+	display: flex;
+}
+li {
+	list-style: none;
+}
+.submit_btn {
+	background: #063970;
+	padding: 10px 40px;
+	border-radius: 8px;
+	border-color: #eee;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 600;
+}
+.check {
+	margin-right: 10px;
+}
+        /* .email_phnno.row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 100%;
+            justify-content: space-between;
+        }
+        .f_name.row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .email_phnno.row {
+        	display: flex;
+        	flex-direction: row;
+        	justify-content: space-between;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="container">
+
+            <img src="images/bg.png" id="bg_img" width="800">
+
+            <div class="wrap_div">
+                <h2 class="main_heading">Dance Registration</h2>
+                <p>Fill the registration form below keenly to enter the dancing competition.</p>
+                <label>Name</label>
+                <div class="f_name">
+                    <input type="text" class="fname" placeholder="Enter First Name">
+                    <input type="text" class="lname" placeholder="Enter Last Name">
+                </div>
+                <div class="email_phnno row">
+                    <div class="email_col">
+                        <label>Email Address</label>
+
+                        <input type="email" class="email" placeholder="Enter Gmail">
+                    </div>
+                    <div class="phnno">
+                        <label>Phone Number</label>
+                        <input type="tel" class="pnum" placeholder="Enter Phone Number">
+                    </div>
+
+                </div>
+                <label>Gender</label>
+                <div class="gender_row">
+                    <div class="gender_cln">
+                    <input type="radio" class="gender" value="male" name="gender">Male
+                </div>
+                    <div class="gender_cln">
+                      <input type="radio" class="gender" value="female" name="gender">Female
+                    </div>
+                    <div class="gender_cln">
+                       <input type="radio" class="gender" value="other" name="gender">Other
+                    </div>
+                </div>
+                <div class="address">
+                    <label>Address</label>
+                    <textarea type="text" class="add" placeholder="Enter Address">
+                    </textarea>
+                </div>
+                <div class="">Type of Dance</div>
+                <div class="type_of_dance">
+                    <ul class="list">
+                    <li><input type="checkbox" value="Salsa" class="check">Salsa</li>
+                    <li><input type="checkbox" value="Tango" class="check">Tango</li>
+                    <li><input type="checkbox" value="Club" class="check">Club</li>
+                    </ul>
+                    <ul class="list">
+                    <li><input type="checkbox" value="Bachat" class="check">Bachat</li>
+                    <li><input type="checkbox" value="Hip-Hop" class="check">Hip-Hop</li>
+                    <li><input type="checkbox" value="Other" class="check">Other</li>
+                    </ul>
+
+                </div>
+
+                <div class="comment">
+                    <label>Comment</label>
+                    <textarea type="text" class="cmt" placeholder="Enter Comment">
+                    </textarea>
+                </div>
+                <button type="submit" class="submit_btn">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
