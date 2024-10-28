@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/slick.css"/>
+
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            width: 800px;
+           
+        }
+        /* .main_container{
+            background-image: linear-gradient(to right,#f098c8, #7ac8e8);
+        } */
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h2{
+            margin: 0px;
+        }
+        .wrap_div {
+            background-color: #fff;
+            padding: 30px;
+            margin-top: -3px;
+            box-shadow: 3px 2px 5px #eee;
+        }
+        .social-login {
+    margin-top: 50px !important;
+}
+        input.fname,input.lname{
+            padding: 8px;
+            margin: 10px 0px;
+            height: 30px;
+            border-radius: 2px;
+            border-color: #eee;
+            border-width: 1px;
+            width: 47%;
+        }
+        .email_col, .phnno {
+        	display: flex;
+        	flex-direction: column;
+        	width: 50%;
+        	margin: 0px 5px 0px 0px;
+           
+        }
+      
+        input.pnum, input.email {
+	padding: 8px;
+	border-radius: 2px;
+	border-color: #eee;
+	border-width: 1px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+    height: 30px;
+}
+        .email_phnno{
+        	display: flex;
+        	flex-direction: row;
+        	width: 100%;
+        	justify-content: space-between;
+            margin: 20px 0px;
+        }
+        .phnno {
+        	display: flex;
+        	flex-direction: column;
+        }
+        .email {
+	width: 95%;
+}
+.gender_row {
+	display: flex;
+	flex-direction: row;
+}
+.gender_row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 10px 0px;
+}
+.address,.comment {
+	display: flex;
+	flex-direction: column;
+    margin-top: 20px;
+}
+.add,.cmt{
+	height: 80px;
+	border-radius: 5px;
+	margin-top: 10px;
+	border-color: #eee;
+	border-width: 1px;
+	margin-bottom: 20px;
+}
+.type_of_dance {
+	display: flex;
+}
+li {
+	list-style: none;
+}
+.submit_btn {
+    background: #000;
+    padding: 20px 120PX;
+    border-radius: 50px;
+    border-color: #eee;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+}
+.submit_btn:hover{
+    background: #ff4400;
+}
+.check {
+	margin-right: 10px;
+}
+.submt {
+    width: 50%;
+}
+        /* .email_phnno.row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 100%;
+            justify-content: space-between;
+        }
+        .f_name.row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .email_phnno.row {
+        	display: flex;
+        	flex-direction: row;
+        	justify-content: space-between;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="container">
+
+            <!-- <img src="images/bg.png" id="bg_img" width="800"> -->
+            <div class="social-login d-flex flex-column w-50 m-auto">
+                                
+                <a href="#" class="btn custom-btn social-btn mb-4">
+                    <i class="bi bi-google me-3"></i>
+
+                    Continue with Google
+                </a>
+
+                <a href="#" class="btn custom-btn social-btn">
+                    <i class="bi bi-facebook me-3"></i>
+
+                    Continue with Facebook
+                </a>
+            </div>
+
+            <div class="wrap_div">
+                <h2 class="main_heading">Registration</h2>
+                <label>Name</label>
+                <div class="f_name">
+                    <input type="text" class="fname" placeholder="Enter First Name">
+                    <input type="text" class="lname" placeholder="Enter Last Name">
+                </div>
+                <div class="email_phnno row">
+                    <div class="email_col">
+                        <label>Email Address</label>
+
+                        <input type="email" class="email" placeholder="Enter Gmail">
+                    </div>
+                    <div class="phnno">
+                        <label>Phone Number</label>
+                        <input type="tel" class="pnum" placeholder="Enter Phone Number">
+                    </div>
+
+                </div>
+                <label>Gender</label>
+                <div class="gender_row">
+                    <div class="gender_cln">
+                    <input type="radio" class="gender" value="male" name="gender">Male
+                </div>
+                    <div class="gender_cln">
+                      <input type="radio" class="gender" value="female" name="gender">Female
+                    </div>
+                    <div class="gender_cln">
+                       <input type="radio" class="gender" value="other" name="gender">Other
+                    </div>
+                </div>
+                <div class="address">
+                    <label>Address</label>
+                    <textarea type="text" class="add" placeholder="Enter Address">
+                    </textarea>
+                </div>
+                
+                <div class="comment">
+                    <label>Comment</label>
+                    <textarea type="text" class="cmt" placeholder="Enter Comment">
+                    </textarea>
+                </div>
+                <button type="submit" class="btn custom-btn social-btn mb-4 submt">Submit</button>
+
+                <p class="text-center">Already have an account? Please <a href="sign-in.html">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
